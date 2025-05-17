@@ -19,17 +19,20 @@ The project is organized as follows:
 
 ```
 llm-assistant/
-├── agents/                 # Core agent logic
-│   ├── base.py             # Base classes/interfaces for agents
-│   ├── openrouter_llm.py   # Handles OpenRouter LLM communication
-│   ├── research_agent.py   # Agent responsible for research tasks
-│   └── response_agent.py   # Agent responsible for generating final responses
-├── config.py               # Central configuration (e.g., model names, paths)
-├── main.py                 # Main entry point for the assistant application
-├── requirements.txt        # Python package dependencies
-├── test_llm.py             # Unit tests for LLM integrations
-├── test_rag.py             # Unit tests for RAG functionalities
-└── .env                    # Environment variables (API keys, etc.)
+├── agents/
+│   ├── __init__.py
+│   ├── research_agent.py
+│   └── response_agent.py
+├── memory/
+│   ├── __init__.py
+│   └── vector_store.py
+├── tools/
+│   ├── __init__.py
+│   ├── web_search.py
+│   └── doc_retriever.py
+├── config.py
+├── main.py
+└── requirements.txt
 ```
 
 ---
